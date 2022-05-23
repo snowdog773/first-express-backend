@@ -7,7 +7,7 @@ app.post("/", (req, res) => {
     asyncMySQL(
       `INSERT INTO userdata (Username, Email, Password, Firstname, Lastname, Age, Occupation) VALUES ('${req.body.username}', '${req.body.email}', '${req.body.password}', '${req.body.firstName}', '${req.body.lastName}', ${req.body.age}, '${req.body.occupation}');`
     );
-    res.send("data stored");
+    res.send("data stored thanks");
   } catch {
     res.send(error);
   }
